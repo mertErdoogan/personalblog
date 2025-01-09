@@ -1,7 +1,9 @@
-export default function Home() {
+import GithubButton from "./_components/GithubButton";
+
+export default async function Home() {
   return (
-    <>
-      Home Page
-    </>
+    <div>
+      <GithubButton />
+    </div>
   );
 };
