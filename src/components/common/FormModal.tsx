@@ -1,13 +1,13 @@
 "use client";
 
-import TodoForm, { TodoP } from "@/app/_components/TodoForm";
+import TodoForm, { TodoP } from "@/app/todos/_components/TodoForm";
 import Modal from "./Modal";
 import React, { useEffect, useState } from "react";
 import { RootState } from "@/store";
 import { closeModal } from "@/store/slices/TodoFormSlice";
 import { setActiveTodo } from "@/store/slices/TodoSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { getTodos } from "@/app/actions";
+import { getTodos } from "@/app/todos/actions";
 
 export default function FormModal() {
   const [formValues, setFormValues] = useState<TodoP | null>();
