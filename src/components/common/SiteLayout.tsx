@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import FormModal from "./FormModal";
 import { Session } from "next-auth";
 import { SessionProvider } from "next-auth/react"
+import NavMenu from "./NavMenu";
 
 
 export default function SiteLayout({
@@ -18,6 +19,9 @@ export default function SiteLayout({
     <>
       <SessionProvider session={session}>
         <Provider store={store}>
+          <div className="py-2">
+            <NavMenu />
+          </div>
           {children}
           <FormModal />
         </Provider>
