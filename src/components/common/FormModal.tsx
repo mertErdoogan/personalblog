@@ -56,15 +56,16 @@ export default function FormModal() {
       setFormValues(null);
     }
   }, [activeTodoId]);
-
   if (isLoading) return <p>Loading...</p>;
   return (
     <Modal isOpen={isOpen} onClose={close}>
-      <TodoForm
-        formValues={formValues || undefined}
-        closeFormModal={closeFormModal}
-        setEmptyActiveTodo={setEmptyActiveTodo}
-      />
+      <div className="px-12 py-12">
+        <TodoForm
+          formValues={formValues || undefined}
+          closeFormModal={closeFormModal}
+          setEmptyActiveTodo={setEmptyActiveTodo}
+        />
+      </div>
     </Modal>
   );
 }

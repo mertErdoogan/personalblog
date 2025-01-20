@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from "axios";
-import { ApiResponse } from "../../types/api-response";
+import { ApiResponse } from "../types/api-response";
 
 const axiosInstance = axios.create({
   baseURL: "http://localhost:3000", 

@@ -1,6 +1,8 @@
 import { getServerSession } from "next-auth";
 import TodoPage from "./_components";
 import { redirect } from "next/navigation";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 export const revalidate = 1;
 
@@ -24,7 +26,9 @@ export default async function Todos(props: {
   return (
     <div className="container py-20">
       <div className="py-5">
-        <TodoPage queryStr={query} status={status} />
+        <Suspense fallback={<Loading />}>
+          <TodoPage queryStr={query} status={status} />
+        </Suspense>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { ApiResponse } from "../../types/api-response";
+import { ApiResponse } from "./api-response";
 
 export const createResponse = <T>(
   message: string,

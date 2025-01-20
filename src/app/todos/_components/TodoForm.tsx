@@ -74,7 +74,7 @@ export default function TodoForm({
             ))}
           </select>
         </div>
-        <TodoFormButton />
+        <TodoFormButton create={!!formValues} />
       </form>
     </>
   );

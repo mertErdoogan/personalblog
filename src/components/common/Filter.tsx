@@ -15,6 +15,7 @@ export default function Filter() {
   const handleChangeStatusFilter = (value: string) => {
     const params = new URLSearchParams(searchParams);
     const selectedStatuses = params.getAll("status");
+
     if (selectedStatuses.includes(value)) {
       const selectedValues = params.getAll("status");
       params.delete("status");
@@ -43,7 +44,7 @@ export default function Filter() {
         <AdjustmentsHorizontalIcon className="w-5 h-5 text-blue-600" />
       </button>
       {open && (
-        <div className="absolute border-blue-600 min-w-56 px-6 py-4 block border bg-white shadow top-[98%] right-0 z-10">
+        <div className="absolute border-blue-600 min-w-56 px-6 py-4 block border bg-white shadow top-[97%] right-0 z-10">
           <div className="space-y-4">
             <h2 className="text-lg text-blue-600 font-semibold">Todo Status</h2>
             <div className="gap-6 grid grid-cols-2">

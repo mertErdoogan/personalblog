@@ -20,7 +20,7 @@ const Modal = ({ isOpen, onClose, children }: ModalProps) => {
           className="fixed z-50 w-screen bg-black/15 min-h-screen flex items-center justify-center top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4"
           onClick={handleOverlayClick}
         >
-          <div className="bg-white p-6 rounded-md shadow-lg max-w-sm w-full">
+          <div className="bg-white p-6 rounded-2xl shadow-lg min-w-[600px] max-w-sm w-full">
             <div className="mb-4">{children}</div>
             <button
               onClick={onClose}

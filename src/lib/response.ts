@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { ApiResponse } from "../../types/api-response";
+import { ApiResponse } from "../types/api-response";
 
 export const createResponse = <T>(
   message: string,

@@ -7,7 +7,7 @@ export default async function Home() {
     <>
       <div className="container w-full text-center pt-24 space-y-12">
         <p className="text-3xl font-bold italic text-blue-500">
-          Welcome, {session?.user?.name}
+          Welcome, <span className="underline">{session?.user?.name}</span>
         </p>
         <Link
           href={"/todos"}

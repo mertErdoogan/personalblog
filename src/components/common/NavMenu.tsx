@@ -14,7 +14,7 @@ export default function NavMenu() {
       <div className="flex items-center gap-4 text-sm font-bold">
         <Link
           className={clsx("hover:underline", {
-            "text-blue-500 underline": pathname === "/",
+            "text-blue-500 underline": pathname !== "/",
           })}
           href={"/"}
         >
@@ -22,7 +22,7 @@ export default function NavMenu() {
         </Link>
         <Link
           className={clsx("hover:underline", {
-            "text-blue-500 underline": pathname === "/todos",
+            "text-blue-500 underline": pathname !== "/todos",
           })}
           href={"/todos"}
         >
